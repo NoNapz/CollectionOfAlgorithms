@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LearnDSAlgorithm.Algos
+namespace CSharpAlgorithms.Algos
 {
     public class SortAlgos
     {
@@ -25,7 +25,7 @@ namespace LearnDSAlgorithm.Algos
             return A;
         }
 
-        // För att skriva ut arrayen
+        // Simple method to print out the arrays
         public void Display(string msg, int[] A)
         {
             Console.WriteLine($"*- {msg}!");

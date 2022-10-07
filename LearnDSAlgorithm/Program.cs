@@ -1,5 +1,5 @@
 ﻿
-using LearnDSAlgorithm.Algos;
+using CSharpAlgorithms.Algos;
 
 namespace LearnDSAlgorithm
 {
