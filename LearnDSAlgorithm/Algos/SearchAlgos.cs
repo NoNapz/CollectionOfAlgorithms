@@ -8,7 +8,7 @@ namespace LearnDSAlgorithm.Algos
 {
     public class SearchAlgos
     {
-        // Letar efter en matching i en array, linjärt-
+        // Linear Search
         public int LinearSearch(int[] A, int n, int key)
         {
             int i = 0;
@@ -20,7 +20,7 @@ namespace LearnDSAlgorithm.Algos
             return -1;
         }
 
-        // Binär sökning, har en start om inskickade nummret är större sök efter matching i korrekt direktion.
+        // Binary search
         public int BinarySearch(int[] A, int n, int key)
         {
             int leftIdx = 0;
@@ -35,7 +35,7 @@ namespace LearnDSAlgorithm.Algos
             return -1;
         }
 
-        // Binär rec sökning, samma funktuon körs flera gånger, splitter arrayen tills rätt index hittas och sedan skrivs ut.
+        // Binary rec search
         public int BinaryRecSearch(int[] A, int key, int leftIdx, int rightIdx)
         {
             if (leftIdx > rightIdx) return -1;
