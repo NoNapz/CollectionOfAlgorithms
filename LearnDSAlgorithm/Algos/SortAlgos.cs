@@ -60,7 +60,29 @@ namespace CSharpAlgorithms.Algos
             return A;
         }
 
-        // Shell Sort
+        // Shell Sort, similar to insertion except it works with gaps.
+        public int[] ShellSort(int[] A)
+        {
+            int gap = A.Length / 2;
+            while(gap > 0)
+            {
+                int i = gap;
+                while(i < A.Length)
+                {
+                    int temp = A[i];
+                    int j = i - gap;
+                    while(j >= 0 && A[j] > temp)
+                    {
+                        A[j + gap] = A[j];
+                        j = j - gap;
+                    }
+                    A[j + gap] = temp;
+                    i++;
+                }
+                gap /= 2;
+            }
+            return A;
+        }
 
         // Merge Sort
 
