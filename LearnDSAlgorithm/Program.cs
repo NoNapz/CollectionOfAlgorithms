@@ -19,6 +19,7 @@ namespace LearnDSAlgorithm
             int[] E = { 9, 4, 31, 22, 5, 1, 15, 8 };
             int[] F = { 19, 14, 1, 2, 25, 11, 5, 18 };
             int[] G = { 17, 1, 12, 2, 25, 31, 50, 23 };
+            int[] H = { 10, 30, 13, 22, 45, 60, 49, 37 };
 
             /**
              * End of Array declarations
@@ -72,7 +73,17 @@ namespace LearnDSAlgorithm
             int[] mergeSortArray = sortAlgos.MergeSort(G, 0, G.Length - 1);
             displayArray.Display("Displaying Merge Sorted Array", mergeSortArray);
 
-            // End of sort algorithms
+            displayArray.Display("Now Using", H);
+            int[] quickSortArray = sortAlgos.QuickSort(H, 0, H.Length - 1);
+            displayArray.Display("Displaying Quick Sorted Array", quickSortArray);
+
+            /**
+             * End of sort Algorithms
+             * ~~~~~~~~~~~~~~~~~~~~~~~~
+             * Start of Linkedlist
+            **/
+
+            // End of Linkedlist
 
             Console.ReadKey();
         }

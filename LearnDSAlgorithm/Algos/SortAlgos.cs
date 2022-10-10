@@ -132,6 +132,46 @@ namespace CSharpAlgorithms.Algos
                 A[x] = B[x];
         }
 
-        // Quick Sort
+        // Quick Sort -- very efficent sorting method, besides when the array is close to sorted already.
+        public int[] QuickSort(int[] A, int low, int high)
+        {
+            if(low < high)
+            {
+                int partitionNum = Partition(A, low, high);
+                // Recursive call
+                QuickSort(A, low, partitionNum - 1);
+                QuickSort(A, partitionNum + 1, high);
+            }
+            return A;
+        }
+        public int Partition(int[] A, int low, int high)
+        {
+            int pivot = A[low];
+            int i = low + 1;
+            int j = high;
+            do
+            {
+                while (i <= j && A[i] <= pivot)
+                {
+                    i++;
+                }
+                while (i <= j && A[i] > pivot)
+                {
+                    j--;
+                }
+                if(i <= j)
+                {
+                    Swap(A, i, j);
+                }
+            } while (i < j);
+            Swap(A, low, j);
+            return j;
+        }
+        public void Swap(int[] A, int i, int j)
+        {
+            int temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+        }
     }
 }
