@@ -25,12 +25,45 @@ namespace CSharpAlgorithms.Algos
             return A;
         }
 
-        // Simple method to print out the arrays
-        public void Display(string msg, int[] A)
+        // Insertion Sort, a good way to see this algorithm is like sorting playing cards by hand.
+        public int[] InsertSort(int[] A)
         {
-            Console.WriteLine($"*- {msg}!");
-            for (int i = 0; i < A.Length; i++) Console.Write(A[i] + " ");
-            Console.WriteLine();
+            for (int i = 1; i < A.Length; i++)
+            {
+                int temp = A[i];
+                int pos = i;
+                while(pos > 0 && A[pos - 1] > temp)
+                {
+                    A[pos] = A[pos - 1];
+                    pos--;
+                }
+                A[pos] = temp;
+            }
+            return A;
         }
+
+        // Bubble Sort, goes thro array if index at any position is less than the previous, swap them, repeat.
+        public int[] BubbleSort(int[] A)
+        {
+            for (int pass = A.Length - 1; pass >= 0; pass--)
+            {
+                for (int i = 0; i < pass; i++)
+                {
+                    if (A[i] > A[i+1])
+                    {
+                        int temp = A[i];
+                        A[i] = A[i + 1];
+                        A[i + 1] = temp;
+                    }
+                }
+            }
+            return A;
+        }
+
+        // Shell Sort
+
+        // Merge Sort
+
+        // Quick Sort
     }
 }
