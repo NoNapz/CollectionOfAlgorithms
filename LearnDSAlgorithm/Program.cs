@@ -18,6 +18,7 @@ namespace LearnDSAlgorithm
             int[] D = { 5, 2, 10, 20, 35, 14, 7, 28 };
             int[] E = { 9, 4, 31, 22, 5, 1, 15, 8 };
             int[] F = { 19, 14, 1, 2, 25, 11, 5, 18 };
+            int[] G = { 17, 1, 12, 2, 25, 31, 50, 23 };
 
             /**
              * End of Array declarations
@@ -66,6 +67,10 @@ namespace LearnDSAlgorithm
             displayArray.Display("Now Using", F);
             int[] shellSortArray = sortAlgos.ShellSort(F);
             displayArray.Display("Displaying Shell Sorted Array", shellSortArray);
+
+            displayArray.Display("Now Using", G);
+            int[] mergeSortArray = sortAlgos.MergeSort(G, 0, G.Length - 1);
+            displayArray.Display("Displaying Merge Sorted Array", mergeSortArray);
 
             // End of sort algorithms
 
